@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
           theme: ThemeData
               .dark(), // 34an elkema tban 34an background black flklma b2t beda
-          debugShowCheckedModeBanner: false,
+          debugShowCheckedModeBanner: false, // el4ret elly fo2 elly mktop 3leeh debug b4elo
           home: HomePage()),
     );
   }
@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
               child: TextField(
                 controller: provider.CompController,
                 decoration:  InputDecoration(
-                  border:OutlineInputBorder(borderRadius:BorderRadius.circular(25)), // 34an a5fy line ally t7t text box // aszwd curvature
+                  border:OutlineInputBorder(borderRadius:BorderRadius.circular(25)), // 34an a5fy line ally t7t text box // a3ml curvature input box
                   fillColor: Colors.white12, // color text file
                   filled: true, // 34an color yzhr
 
@@ -71,11 +71,11 @@ class HomePage extends StatelessWidget {
               decoration: decoration,
               child: GridView.builder(
                 itemCount: labelsList.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(        //2D array of list of items
                     crossAxisCount: 5,
                     mainAxisSpacing: 20,
                     crossAxisSpacing: 10),
-                shrinkWrap: true,
+                shrinkWrap: true,     // كل ما اضيف زرار بقيت الزراير تصغر واعرف احط زراير زى ما انا عايز
                 itemBuilder: (context, index) =>Button(label: labelsList[index]),
               ), // 34an nbd2 n4ml buttons
             )
